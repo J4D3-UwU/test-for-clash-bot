@@ -1,9 +1,7 @@
 import numpy as np
-import win32gui
-import win32ui
-import win32con
+import win32gui, win32ui, win32con
 
-def window_capture(x, y, w, h):
+def WindowCapture(x, y, w, h):
 
 
     hwnd = win32gui.FindWindow(None, "LDPlayer")

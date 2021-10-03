@@ -53,4 +53,4 @@ def Vision(haystack, needle):
             center_y = y + int(h*2)
             # Save the points
             points.append((center_x, center_y))
-    return points
+    return points    

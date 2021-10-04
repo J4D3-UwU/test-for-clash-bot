@@ -15,7 +15,8 @@ class Vision():
         self.method = method
 
 
-    def find(self, haystack_img, debug_mode=None):
+
+    def find(self, haystack_img, name, debug_mode=None):
 
         result = cv.matchTemplate(haystack_img, self.needle_img, self.method)
 
@@ -54,5 +55,6 @@ class Vision():
                 elif debug_mode == "points":
                     cv.drawMarker(haystack_img, (center_x, center_y), marker_color, marker_type)
         if debug_mode:
-            cv.imshow("Matches", haystack_img)
+            cv.imshow(name, haystack_img)
         return points
+
